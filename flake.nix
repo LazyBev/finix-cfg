@@ -68,9 +68,6 @@
       gentuwu = mkFinixHost "gentuwu";
     };
 
-    # `nixos-rebuild --flake .#<host>` compat shim
-    nixosConfig.gentuwu = self.nixosConfigurations.gentuwu.config.system.build.toplevel;
-
     formatter.${system} = pkgs.nixfmt-rfc-style;
   };
 }

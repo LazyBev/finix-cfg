@@ -13,3 +13,6 @@ secrets/
 .obsidian/
 .trash/
 .zed/
+
+# local build outputs
+result
