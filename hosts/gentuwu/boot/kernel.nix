@@ -61,6 +61,9 @@
       "ntsync"
       "v4l2loopback"
       "vmd"
+      "ahci"
+      "ata_piix"
+      "md_mod"
       "nvidia"
       "nvidia_modeset"
       "nvidia_uvm"
@@ -68,6 +71,7 @@
     ];
 
     kernelParams = [
+      "rd.timeout=60"
       "iommu=pt"
       "pcie_aspm=performance"
       "quiet"

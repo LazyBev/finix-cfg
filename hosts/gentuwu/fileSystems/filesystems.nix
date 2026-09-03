@@ -2,7 +2,7 @@ _: {
 
   fileSystems = {
     "/boot" = {
-      device = "/dev/disk/by-label/boot";
+      device = "/dev/nvme0n1p1";
       fsType = "vfat";
       options = [
         "fmask=0022"
@@ -15,7 +15,7 @@ _: {
     };
 
     "/" = {
-      device = "/dev/disk/by-label/nixos";
+      device = "/dev/nvme0n1p3";
       fsType = "ext4";
       options = [
         "noatime"
@@ -26,7 +26,7 @@ _: {
 
   swapDevices = [
     {
-      device = "/dev/disk/by-label/swap";
+      device = "/dev/nvme0n1p2";
     }
   ];
 }
