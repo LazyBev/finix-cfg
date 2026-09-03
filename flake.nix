@@ -18,25 +18,25 @@
 
     finix.url = "github:finix-community/finix";
 
-    hjem = {
-      url = "github:feel-co/hjem";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # hjem = {
+    #   url = "github:feel-co/hjem";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
-    hjem-rum = {
-      url = "github:snugnug/hjem-rum";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        hjem.follows = "hjem";
-      };
-    };
+    # hjem-rum = {
+    #   url = "github:snugnug/hjem-rum";
+    #   inputs = {
+    #     nixpkgs.follows = "nixpkgs";
+    #     hjem.follows = "hjem";
+    #   };
+    # };
 
     nix-cachyos-kernel = {
       url = "github:xddxdd/nix-cachyos-kernel/release";
     };
   };
 
-  outputs = { self, nixpkgs, finix, hjem, ... }@inputs: let
+  outputs = { self, nixpkgs, finix, ... }@inputs: let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
@@ -65,7 +65,7 @@
           {
             nixpkgs.pkgs = pkgs.lib.mkDefault pkgs;
           }
-          hjem.finixModules.default
+          # hjem.finixModules.default
         ];
     };
   in {

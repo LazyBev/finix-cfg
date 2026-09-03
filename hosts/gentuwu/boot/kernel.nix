@@ -49,7 +49,7 @@
         "vm.mmap_rnd_bits" = 32;
         "vm.mmap_rnd_compat_bits" = 16;
         "vm.page-cluster" = 0;
-        "vm.swappiness" = 200;
+        "vm.swappiness" = 100;
         "vm.vfs_cache_pressure" = 50;
       };
     };
@@ -64,10 +64,6 @@
       "ahci"
       "ata_piix"
       "md_mod"
-      "nvidia"
-      "nvidia_modeset"
-      "nvidia_uvm"
-      "nvidia_drm"
     ];
 
     kernelParams = [
@@ -84,8 +80,6 @@
       "page_alloc.shuffle=1"
       "vsyscall=none"
       "oops=panic"
-      "nvidia-drm.modeset=1"
-      "nvidia.NVreg_EnableGpuFirmware=0"
       "lsm=landlock,yama,bpf"
     ];
 
