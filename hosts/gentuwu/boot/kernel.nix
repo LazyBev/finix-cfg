@@ -60,6 +60,7 @@
       "i2c-dev"
       "ntsync"
       "v4l2loopback"
+      "vmd"
       "nvidia"
       "nvidia_modeset"
       "nvidia_uvm"
