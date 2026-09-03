@@ -20,6 +20,15 @@
       shadow
       su
       jq
+      nix
+      nix-index
+      nix-tree
+      nix-direnv
+      nixos-rebuild
+      nh
+      nixfmt-rfc-style
+      alejandra
+      statix
       util-linux
       uutils-acl
       uutils-coreutils-noprefix
