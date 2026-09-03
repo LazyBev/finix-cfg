@@ -7,6 +7,10 @@ _: {
         "-T8"
       ];
 
+      kernelModules = [
+        "nvme"
+      ];
+
       supportedFilesystems = {
         ext4 = {
           enable = true;
@@ -16,6 +20,8 @@ _: {
           enable = true;
         };
       };
+
+      emergencyAccess = true;
     };
   };
 }
