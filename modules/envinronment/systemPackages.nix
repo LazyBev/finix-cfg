@@ -19,6 +19,7 @@
       patch
       shadow
       su
+      jq
       util-linux
       uutils-acl
       uutils-coreutils-noprefix

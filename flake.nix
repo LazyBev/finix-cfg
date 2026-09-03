@@ -41,6 +41,11 @@
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
+      overlays = [
+       (final: prev: {
+         jq = prev.jq // { dev = prev.jq; };
+        })
+      ];
     };
 
     # only import *.nix files as modules; ignore scratch/dotfiles (e.g. *.kdl)
